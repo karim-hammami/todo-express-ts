@@ -10,14 +10,14 @@ type Todo = {
 
 
 export const ListTodos = async (): Promise<Todo[]> => {
-   return db.todo.findMany({
-       select: {
-           id: true,
-           title: true,
-           desc: true,
-           status: true,
-       }
-   }) 
+    return db.todo.findMany({
+        select: {
+            id: true,
+            title: true,
+            desc: true,
+            status: true,
+        }
+    }) 
 }
 
 export const getTodo = async (id: number): Promise<Todo | null> => {
@@ -70,8 +70,5 @@ export const deleteTodo = async (id: number): Promise<void> => {
             id,
         }
     })
-    
+
 }
-
-
-
